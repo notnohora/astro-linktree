@@ -1,13 +1,3 @@
-name: deplot to GH Pages
-
-on:
-  push:
-    branches: [main]
-
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
 name: Deplot to GH Pages
 
 on:
