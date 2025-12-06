@@ -1,16 +1,15 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LinkCard from '../componentes/LinkCard.astro';
+import AllLinks from '../componentes/AllLinks.astro';
+import FeaturedLinks from '../componentes/FeaturedLinks.astro';
+import ProfileHeader from '../componentes/ProfileHeader.astro';
+import PageFooter from '../componentes/PageFooter.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title='Home'>
+    <ProfileHeader/>
+	<FeaturedLinks/>
+	<AllLinks />
+	<PageFooter/>
+</BaseLayout>

@@ -1,0 +1,44 @@
+---
+const profileData ={
+    name: "Nohora Camila",
+    bio: "hola hola hola",
+    tagline: "hola hola",
+}
+import {Image} from "astro:assets"
+import bioImage from "../imagenes/Captura de pantalla 2025-11-12 224929.png"
+---
+<header class="profile-header">
+    <Image class="profile-image" src={bioImage} alt="Profile-image" width={128} height={128}/>
+    <h1 class="name">{profileData.name}</h1>
+    <p class="tagline">{profileData.tagline}</p>
+    <p class="bio">{profileData.bio}</p>
+</header>
+<style>
+    .profile-header{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+        gap: 0.5rem;
+        padding: 0 1rem;
+    }
+    .profile-image{
+        border-radius: 100%;
+        object-fit: cover;
+    }
+    .name{
+        font-size: 1.75rem;
+        font-weight: 700;
+        color:#fff;
+    }
+    .tagline{
+        font-size: 1rem;
+        font-weight: 400;
+        color: #ab9bd9;
+    }
+    .bio{
+        font-size: 0.95rem;
+        font-weight: 400;
+        color: #ab9bd9;
+    }
+</style>

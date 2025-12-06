@@ -1,0 +1,62 @@
+---
+import FeaturedLinksCard from "./FeaturedLinksCard.astro"
+import LinkCard from "./LinkCard.astro";
+const featuredLinks= [
+    {
+        title: "My Portafolio",
+        description: "See my lastest UI/UX projects",
+        url: "https://dribble.com",
+        icon:"mdi:briefcase",
+    },
+    {
+        title: "Lastest Video",
+        description: "Watch my newest tutorial",
+        url: "https://youtube.com",
+        icon:"mdi:play-box",
+    },
+    {
+        title: "Book a Call",
+        description: "Schedule a consultation",
+        url: "https://calendly.com",
+        icon:"mdi:phone",
+    },
+];
+---
+
+<section class="featured-links-section">
+    <h2>Mis links Destacados</h2>
+    <div class="featured-list">
+{
+featuredLinks.map((link) => (
+  <FeaturedLinksCard 
+    title={link.title}
+    description={link.description}
+    url={link.url}
+    icon={link.icon}
+  />
+))
+}
+</div>
+</section>
+
+<style>
+    .feature-links-section{
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        margin-bottom: 1rem;
+    }
+    .section-title{
+        font-size: 1.25rem;
+        font-weight: 600;
+        max-resolution: 0.5rem;
+    }
+    .featured-list{
+        display:flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+</style>
+
